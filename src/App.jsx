@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Projects from "./components/Project";
 import Contact from "./components/Contact";
+import About from "./components/About";
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -21,6 +22,7 @@ function App() {
       </button>
       <Navbar />
       <Hero />
+      <About />
       <Projects />
       <Contact />
     </div>
