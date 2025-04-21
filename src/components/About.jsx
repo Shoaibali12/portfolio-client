@@ -29,10 +29,9 @@ const About = () => {
         <div className="w-full md:w-1/2 text-center md:text-left">
           <h2 className="text-4xl font-extrabold text-cyan-400">About Me</h2>
           <p className="mt-4 text-lg text-gray-300 leading-relaxed">
-            Hi, I'm{" "}
-            <span className="text-cyan-400 font-semibold">Your Name</span>, a
-            Full-Stack Developer passionate about React, Node.js, and modern web
-            technologies.
+            Hi, I'm <span className="text-cyan-400 font-semibold">Shoaib</span>,
+            a Full-Stack Developer passionate about React, Node.js, and modern
+            web technologies.
           </p>
 
           <p className="mt-2 text-gray-400">
