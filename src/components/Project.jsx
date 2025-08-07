@@ -98,36 +98,42 @@ const Projects = () => {
   return (
     <section
       id="projects"
-      className="py-16 bg-gray-900 text-white text-center px-6"
+      className="py-20 px-6 bg-gradient-to-b from-gray-900 to-black text-white text-center"
     >
-      <h2 className="text-4xl font-bold text-cyan-400">My Projects</h2>
+      <h2 className="text-5xl font-bold text-cyan-400 mb-10">My Projects</h2>
 
-      <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-6xl mx-auto">
         {projects.map((project, index) => (
           <div
             key={index}
-            className="bg-gray-800 p-6 rounded-lg shadow-lg hover:scale-105 transform transition duration-300 relative group"
+            className="bg-gray-800/80 backdrop-blur-md border border-gray-700 p-6 rounded-xl shadow-2xl transition-transform transform hover:scale-[1.03] duration-300 group"
           >
             {/* Image Slider */}
-            <Slider {...sliderSettings} className="rounded-lg overflow-hidden">
-              {project.images.map((img, i) => (
-                <img
-                  key={i}
-                  src={img}
-                  alt={`Screenshot ${i + 1}`}
-                  className="w-full h-64 object-cover rounded-lg"
-                />
-              ))}
-            </Slider>
+            <div className="rounded-xl overflow-hidden border border-cyan-500 shadow-lg">
+              <Slider {...sliderSettings}>
+                {project.images.map((img, i) => (
+                  <img
+                    key={i}
+                    src={img}
+                    alt={`Screenshot ${i + 1}`}
+                    className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                ))}
+              </Slider>
+            </div>
 
             {/* Project Details */}
-            <h3 className="text-xl font-semibold mt-4">{project.title}</h3>
-            <p className="text-gray-300 mt-2">{project.description}</p>
+            <h3 className="text-2xl font-semibold mt-6 text-cyan-300 group-hover:text-white transition">
+              {project.title}
+            </h3>
+            <p className="text-gray-400 mt-3 leading-relaxed">
+              {project.description}
+            </p>
 
             {/* View Project Button */}
             <a
               href={project.link}
-              className="text-cyan-400 mt-3 inline-flex items-center gap-2 hover:underline transition duration-300"
+              className="mt-4 inline-flex items-center gap-2 text-cyan-400 hover:text-white transition-all duration-300 hover:underline"
               target="_blank"
               rel="noopener noreferrer"
             >
